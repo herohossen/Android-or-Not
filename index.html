@@ -3,25 +3,30 @@
 
 <head>
     <title>
-        How to detect Android Phone
-        using JavaScript ?
+        Detect your device
     </title>
+
+    <style>
+        #ab:hover {
+            color: white;
+            width: 10%;
+            height: 10%;
+            background-color: red;
+        }
+    </style>
+
 </head>
 
 <body style="text-align:center;">
 
-    <h1 style="color:green;">
-        Delowar
-    </h1>
-
     <p id="GFG_UP" style="font-size: 19px; font-weight: bold;">
     </p>
 
-    <button onclick="GFG_Fun()">
+    <button id="ab" onclick="GFG_Fun()">
         click here
     </button>
 
-    <p id="GFG_DOWN" style="color: green; font-size: 24px; font-weight: bold;">
+    <p id="GFG_DOWN" style="color: red; font-size: 24px; font-weight: bold;">
     </p>
 
     <script>
@@ -31,12 +36,12 @@
             + " the device is android phone.";
 
         function GFG_Fun() {
-            var res = "Device is not Android Phone";
+            var res = "Your Device is not Android Phone";
             var userAgent = navigator.userAgent.toLowerCase();
             var Android = userAgent.indexOf("android") > -1;
 
             if (Android) {
-                res = "Device is Android Phone";
+                res = "Your Device is Android Phone";
             }
             el_down.innerHTML = res;
         }
